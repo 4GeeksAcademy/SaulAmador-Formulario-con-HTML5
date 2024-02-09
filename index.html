@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <title>Formulario de Pago</title>
+</head>
+<body>
+
+  <div class="container">
+    <!-- agregar clase card -->
+    <div class="card text-start">
+
+
+      <!-- agregar clase card-header -->
+      <div class="card-header">
+        <h2>Pago con Tarjeta de credito</h2>
+      </div>
+
+      <!-- agregar clase card-body -->
+      <div class="card-body">
+        <div class="alert alert-danger" role="alert">
+          A simple danger alert—check it out!
+        </div>
+        <form>
+
+          <!-- Card Number, CVC, Amount -->
+          <div class="row d-flex">
+            <div class="form-group col">
+              <label for="inputCardNumber">Card Number</label>
+              <input type="text" class="form-control" id="inputCardNumber" placeholder="Card Number" required>
+            </div>
+            <div class="form-group col">
+              <label for="inputCVC">CVC</label>
+              <input type="text" class="form-control" id="inputCVC" placeholder="CVC" required>
+            </div>
+            <div class="form-group col">
+              <label for="inputAmount">Amount</label>
+              <input type="text" class="form-control" id="inputAmount" placeholder="Amount" required>
+            </div>
+          </div>
+
+          <!-- First Name, Last Name -->
+          <div class="row">
+            <div class="form-group col-6">
+              <label for="inputFirstName">First Name</label>
+              <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group col-6">
+              <label for="inputLastName">Last Name</label>
+              <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required>
+            </div>
+          </div>
+
+          <!-- City, State, Postal Code -->
+          <div class="row">
+            <div class="form-group col-6">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity" placeholder="City" required>
+            </div>
+            
+            <div class="col-6">
+              <div class="row">
+                <div class="form-group col">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="form-group col">
+                  <label for="inputPostalCode">Postal Code</label>
+                  <input type="text" class="form-control" id="inputPostalCode" placeholder="Postal Code" required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- We Accept (Checkboxes & Radios) -->
+          <div class="row">
+            <!-- definir tarjetas aceptadas -->
+            <div class="col-6">
+              <div class="w-50 d-flex flex-row mt-3 bg-secondary">
+                <input type="radio" id="card1" name="paymentMethod" checked>
+                <img src="https://pngimg.com/uploads/mastercard/mastercard_PNG23.png" width="100" height="50" alt="Card 1">
+
+                <input type="radio" id="card2" name="paymentMethod">
+                <img src="https://pngimg.com/uploads/mastercard/mastercard_PNG23.png" width="100" height="50" alt="Card 2">
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="col">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+              <p>Add any notes here</p>
+          </div>
+          </div>
+        </div>
+        <!-- Cancel and Send Buttons -->
+        <div class="card-footer d-flex justify-content-end">
+          <button type="button" class="btn btn-secondary me-2">Cancel</button>
+          <button type="submit" class="btn btn-primary ms-2">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
